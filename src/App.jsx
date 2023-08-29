@@ -28,6 +28,7 @@ import GurujiState from "./context/guruji/GurujiState";
 import setAuthToken from "./utils/setAuthToken";
 
 import AuthContext from "./context/auth/authContext";
+import VirtualHome from "./components/pages/VirtualHome";
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -50,6 +51,7 @@ function App() {
           <UserState>
             <Switch>
               <Route path="/" exact component={Home} />
+              <Route path="/virtual-home" exact component={VirtualHome} />
 
               <Route path="/login" exact component={Login} />
 
