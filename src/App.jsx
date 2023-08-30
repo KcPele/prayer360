@@ -32,6 +32,8 @@ import VirtualHome from "./components/pages/VirtualHome";
 import Tour from "./components/pages/Tour";
 import Store from "./components/pages/Store";
 import Church from "./components/pages/Church";
+import SubscribedChurch from "./components/pages/SubscribedChurch";
+import AllChurch from "./components/pages/AllChurch";
 function App() {
   const authContext = useContext(AuthContext);
 
@@ -78,6 +80,12 @@ function App() {
                 exact
                 component={SubscriberContents}
               />
+              <PrivateRoute
+                path="/subscribed-churches"
+                exact
+                component={SubscribedChurch}
+              />
+              <PrivateRoute path="/all-churches" exact component={AllChurch} />
 
               <PrivateRoute path="/referrals" exact component={Referrals} />
 

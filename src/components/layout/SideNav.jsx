@@ -88,21 +88,22 @@ const SideNav = () => {
               {role === "USER" && (
                 <>
                   <Link
-                    to="/subscriber-contents"
+                    to="/all-churches"
                     className="side_bar_link pl-5 py-3 text-decoration-none"
                   >
                     View All Churches
                   </Link>
 
                   <Link
-                    to="/subscriber-contents"
+                    to="/subscribed-churches"
                     className="side_bar_link pl-5 py-3 text-decoration-none"
                   >
                     My Subscriped Church
                   </Link>
 
                   <Link
-                    to="/subscription"
+                    //to be changed back to subscription
+                    to="/subscriber-contents"
                     className="side_bar_link pl-5 py-3 text-decoration-none"
                   >
                     Subscription
