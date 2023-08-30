@@ -55,7 +55,8 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/virtual-home" exact component={VirtualHome} />
               <Route path="/tour" exact component={Tour} />
-              <Route path="/church/:slug" exact component={Tour} />
+              <Route path="/store" exact component={Store} />
+              <Route path="/church/:slug" exact component={Church} />
               <Route path="/login" exact component={Login} />
 
               <PrivateRoute exact path="/dashboard" component={Dashboard} />

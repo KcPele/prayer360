@@ -46,14 +46,14 @@ const Tour = () => {
                 </div>
               </div>
               <div className="absolute flex justify-between transform-translate-y-1/2 left-5 right-5 top-1/2">
-                {index != 0 ? (
+                {index !== 0 ? (
                   <a href={`#slide${index - 1}`} className="btn btn-circle">
                     ❮
                   </a>
                 ) : (
                   <p></p>
                 )}
-                {index != slidedatas.length - 1 && (
+                {index !== slidedatas.length - 1 && (
                   <a href={`#slide${index + 1}`} className="btn btn-circle">
                     ❯
                   </a>

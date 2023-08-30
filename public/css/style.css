@@ -2,7 +2,7 @@
 
 html,
 body {
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
 * {
@@ -17,7 +17,7 @@ p {
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "Manrope", sans-serif !important;
 }
 
