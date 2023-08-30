@@ -16,35 +16,35 @@ function Navbar() {
             <div className="hidden nav:block">
               <div className="ml-10 flex items-baseline space-x-4 ">
                 <Link
-                  href="/"
+                  to="/"
                   className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md  font-medium"
                 >
                   Home
                 </Link>
 
                 <Link
-                  href="/virtual-home"
+                  to="/dashboard"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
                   Subscription Plans
                 </Link>
 
                 <Link
-                  href="/tour"
+                  to="/dashboard"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
                   Service
                 </Link>
 
                 <Link
-                  href="/login"
+                  to="/login"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
                   Player Token
                 </Link>
 
                 <Link
-                  href="#"
+                  to="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
                 >
                   Contact Us
@@ -113,35 +113,35 @@ function Navbar() {
           <div className="nav:hidden bg-black " id="mobile-menu">
             <div ref={ref} className="px-2 pt-2 pb-3  w-full space-y-1 sm:px-3">
               <Link
-                href="/"
+                to="/"
                 className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md  font-medium"
               >
                 Home
               </Link>
 
               <Link
-                href="/virtual-home"
+                to="/dashboard"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
                 Subscription Plans
               </Link>
 
               <Link
-                href="/tour"
+                to="/dashboard"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
                 Service
               </Link>
 
               <Link
-                href="/login"
+                to="/login"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
                 Player Token
               </Link>
 
               <Link
-                href="#"
+                to="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
               >
                 Contact Us

@@ -29,7 +29,7 @@ const StoreCardModal = ({ isOpen, closeModal, title, image }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-[73rem] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-[73rem] transform overflow-hidden rounded-2xl bg-white p-6 mt-4 text-left align-middle shadow-xl transition-all">
                 <div className="p-4 grid  gap-8 md:grid-cols-2">
                   <div className="max-w-[500px] rounded-xl overflow-hidden">
                     <img

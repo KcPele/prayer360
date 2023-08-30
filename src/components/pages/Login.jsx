@@ -4,6 +4,7 @@ import AuthContext from "../../context/auth/authContext";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../Navbar";
 
 const Login = () => {
   const authContext = useContext(AuthContext);
@@ -46,59 +47,52 @@ const Login = () => {
 
   return (
     <div>
-      <header>
-        <nav className="header">
-          <a href="#" className="pl-5 display_none">
-            <img src="img/Prayer.png" alt="" />
-          </a>
-        </nav>
-      </header>
+      <Navbar />
+
       <ToastContainer />
-      <div className="container-fluid">
-        <div className="">
-          <div className="max-w-[550px] mx-auto w-full">
-            <form onSubmit={onSubmit} className="formContainer">
-              <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email</label>
-                <input
-                  name="email"
-                  value={email}
-                  onChange={onChange}
-                  type="email"
-                  className="form-control"
-                  style={{ height: "55px" }}
-                  id="exampleInputEmail1"
-                  placeholder="Enter email"
-                  aria-describedby="emailHelp"
-                />
-              </div>
+      <div className="container-fluid   flex justify-center items-center h-screen">
+        <div className="max-w-[550px]   mx-auto w-full">
+          <form onSubmit={onSubmit} className="formContainer">
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Email</label>
+              <input
+                name="email"
+                value={email}
+                onChange={onChange}
+                type="email"
+                className="form-control"
+                style={{ height: "55px" }}
+                id="exampleInputEmail1"
+                placeholder="Enter email"
+                aria-describedby="emailHelp"
+              />
+            </div>
 
-              <div className="form-group mt-4">
-                <label htmlFor="exampleInputPassword1">Password</label>
-                <input
-                  name="password"
-                  value={password}
-                  onChange={onChange}
-                  type="password"
-                  className="form-control"
-                  style={{ height: "55px" }}
-                  placeholder="Enter Password"
-                  id="exampleInputPassword1"
-                />
-              </div>
+            <div className="form-group mt-4">
+              <label htmlFor="exampleInputPassword1">Password</label>
+              <input
+                name="password"
+                value={password}
+                onChange={onChange}
+                type="password"
+                className="form-control"
+                style={{ height: "55px" }}
+                placeholder="Enter Password"
+                id="exampleInputPassword1"
+              />
+            </div>
 
-              <button
-                type="submit"
-                style={{
-                  background: "linear-gradient(to right,#6561ba,#16168e)",
-                  border: "none",
-                }}
-                className="btn btn-primary btn-block py-2 mt-5"
-              >
-                Login
-              </button>
-            </form>
-          </div>
+            <button
+              type="submit"
+              style={{
+                background: "linear-gradient(to right,#6561ba,#16168e)",
+                border: "none",
+              }}
+              className="btn btn-primary btn-block py-2 mt-5"
+            >
+              Login
+            </button>
+          </form>
         </div>
       </div>
     </div>
