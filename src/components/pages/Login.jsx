@@ -50,8 +50,8 @@ const Login = () => {
       <Navbar />
 
       <ToastContainer />
-      <div className="container-fluid   flex justify-center items-center h-screen">
-        <div className="max-w-[550px]   mx-auto w-full">
+      <div className="container-fluid bg-home bg-cover pt-32 bg-center bg-no-repeat   flex justify-center items-center h-screen">
+        <div className="max-w-[550px] bg-slate-200 rounded   mx-auto w-full">
           <form onSubmit={onSubmit} className="formContainer">
             <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email</label>
