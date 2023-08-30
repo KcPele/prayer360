@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import HomePage from "../home/HomePage";
+import Navbar from "../Navbar";
 
 export default function Home() {
   const homeData = [
@@ -19,8 +21,11 @@ export default function Home() {
     },
   ];
   return (
-    <main className="bg-home bg-cover pt-32 bg-center bg-no-repeat  min-h-screen">
-      <HomePage title="Home" locations={[]} homeData={homeData} />
-    </main>
+    <Fragment>
+      <Navbar />
+      <main className="bg-home bg-cover pt-32 bg-center bg-no-repeat  min-h-screen">
+        <HomePage title="Home" locations={[]} homeData={homeData} />
+      </main>
+    </Fragment>
   );
 }

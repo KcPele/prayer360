@@ -12,7 +12,7 @@ const HomePage = ({ title, locations, homeData }) => {
           <div
             key={index}
             onClick={() => history.push(item?.url)}
-            className="relative snap-always overflow-hidden cursor-pointer snap-center  max-w-[18rem] rounded-2xl  h-[16rem]"
+            className="relative snap-always overflow-hidden hover:cursor-pointer snap-center  max-w-[18rem] rounded-2xl  h-[16rem]"
           >
             <img
               className="object-fill h-full w-ful  rounded-2xl"

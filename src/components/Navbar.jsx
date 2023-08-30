@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Link from "next/link";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-black ">
-      <div className=" px-4 max-w-[1800px] mx-auto">
+    <nav className="bg-black  relative">
+      <div className=" px-4 max-w-[1800px] mx-auto w-full">
         <div className="flex items-center justify-between py-2">
-          <div className="flex items-center justify-between w-full ">
+          <div className="flex items-center  justify-between w-full ">
             <div className="flex-shrink-0">
               <h3 className="text-white text-xl font-bold">PLAYER 360</h3>
             </div>
@@ -107,10 +107,11 @@ function Navbar() {
         leave="transition ease-in duration-75 transform"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
+        className="bg-black absolute top-20 inset-0"
       >
         {(ref) => (
-          <div className="nav:hidden " id="mobile-menu">
-            <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="nav:hidden bg-black " id="mobile-menu">
+            <div ref={ref} className="px-2 pt-2 pb-3  w-full space-y-1 sm:px-3">
               <Link
                 href="/"
                 className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md  font-medium"

@@ -29,7 +29,9 @@ import setAuthToken from "./utils/setAuthToken";
 
 import AuthContext from "./context/auth/authContext";
 import VirtualHome from "./components/pages/VirtualHome";
-
+import Tour from "./components/pages/Tour";
+import Store from "./components/pages/Store";
+import Church from "./components/pages/Church";
 function App() {
   const authContext = useContext(AuthContext);
 
@@ -52,7 +54,8 @@ function App() {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/virtual-home" exact component={VirtualHome} />
-
+              <Route path="/tour" exact component={Tour} />
+              <Route path="/church/:slug" exact component={Tour} />
               <Route path="/login" exact component={Login} />
 
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
