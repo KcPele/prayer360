@@ -15,7 +15,11 @@ const HomePage = ({ title, locations, homeData }) => {
             className="relative snap-always overflow-hidden hover:cursor-pointer snap-center  max-w-[18rem] rounded-2xl  h-[16rem]"
           >
             <div className=" rounded-2xl">
-              <img className=" h-full w-ful  rounded-2xl" src={item?.src} />
+              <img
+                className=" h-full w-ful  rounded-2xl"
+                src={item?.src}
+                alt="church"
+              />
             </div>
             <div className="absolute bottom-0 p-3 text-center w-full backdrop-blur-sm bg-black/30">
               <h3 className="text-white text-xl ">{item.title}</h3>
