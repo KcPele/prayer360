@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import HomePage from "../home/HomePage";
 import Navbar from "../Navbar";
+import Footer from "../home/Footer";
 
 const VirtualHome = () => {
   const homeData = [
@@ -30,6 +31,7 @@ const VirtualHome = () => {
           homeData={homeData}
         />
       </main>
+      <Footer />
     </Fragment>
   );
 };
