@@ -14,7 +14,7 @@ const Login = () => {
 
   const history = useHistory();
 
-  const { login, isAuthenticated, error, clearErrors } = authContext;
+  const { login, logout, isAuthenticated, error, clearErrors } = authContext;
 
   const notify = (msg) => toast(msg);
 
@@ -45,6 +45,7 @@ const Login = () => {
       notify("Please fill in all fields");
     } else {
       login({ email, password });
+      // logout();
     }
   };
 
