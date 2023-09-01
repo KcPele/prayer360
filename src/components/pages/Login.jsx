@@ -5,8 +5,11 @@ import AuthContext from "../../context/auth/authContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../Navbar";
+import ChurchModal from "../church/ChurchModal";
 
 const Login = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const authContext = useContext(AuthContext);
 
   const history = useHistory();
@@ -51,7 +54,7 @@ const Login = () => {
 
       <ToastContainer />
       <div className="container-fluid bg-home bg-cover pt-32 bg-center bg-no-repeat   flex justify-center items-center h-screen">
-        <div className="max-w-[550px] bg-slate-200 rounded   mx-auto w-full">
+        <div className="max-w-[580px] bg-slate-200 rounded  p-10 md:p-20  mx-auto w-full">
           <form onSubmit={onSubmit} className="formContainer">
             <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email</label>
@@ -92,9 +95,15 @@ const Login = () => {
             >
               Login
             </button>
+            <div className="mt-4">
+              <p className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                Register if you dont have an accoun?
+              </p>
+            </div>
           </form>
         </div>
       </div>
+      <ChurchModal isOpen={isOpen} closeModal={() => setIsOpen(false)} />
     </div>
   );
 };
