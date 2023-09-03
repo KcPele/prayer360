@@ -39,13 +39,6 @@ function Navbar() {
                   Service
                 </Link>
 
-                <Link
-                  to="/login"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
-                >
-                  Player Token
-                </Link>
-
                 {user == null ? (
                   <Link
                     to="/login"
@@ -143,13 +136,6 @@ function Navbar() {
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
                 Service
-              </Link>
-
-              <Link
-                to="/login"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
-              >
-                Player Token
               </Link>
 
               {user !== null ? (
