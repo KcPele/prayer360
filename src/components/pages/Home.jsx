@@ -25,7 +25,11 @@ export default function Home() {
     <Fragment>
       <Navbar />
       <main className="bg-home bg-cover pt-32 bg-center bg-no-repeat  min-h-screen">
-        <HomePage title="Home" locations={[]} homeData={homeData} />
+        <HomePage
+          title="Life Giving Purpose"
+          locations={[]}
+          homeData={homeData}
+        />
       </main>
       <div className="bg-[#FFC04B] px-3 md:px-5 text-center py-[3rem]">
         <h2 className="text-black font-bold text-3xl md:text-4[rem]">
