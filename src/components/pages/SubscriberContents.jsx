@@ -6,7 +6,6 @@ import AuthContext from "../../context/auth/authContext";
 import UserContext from "../../context/user/userContext";
 import Gurujis from "./Gurujis";
 import Content from "../common/Content";
-import Navbar from "../Navbar";
 
 const SubscriberContents = () => {
   const authContext = useContext(AuthContext);

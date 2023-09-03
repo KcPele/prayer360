@@ -5,8 +5,7 @@ import SideNav from "../layout/SideNav";
 import AuthContext from "../../context/auth/authContext";
 import UserContext from "../../context/user/userContext";
 import Gurujis from "./Gurujis";
-import TourCard from "../tour/TourCard";
-
+import Content from "../common/Content";
 import StoreCardSection from "../store/StoreCardSection";
 
 const SubscribedChurch = () => {
@@ -90,19 +89,17 @@ const SubscribedChurch = () => {
                   {showChurchStore ? (
                     <StoreCardSection storeData={storeData} />
                   ) : (
-                    <div className=" grid tour__card-section2 gap-3 md:gap-6 px-3">
-                      <TourCard
-                        title="Trimbakeshwar Temple"
-                        discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-                        img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                        url="/church/trimbakeshwar"
-                      />
-                      <TourCard
-                        title="Trimbakeshwar Temple"
-                        discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-                        img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                        url="/church/trimbakeshwar"
-                      />
+                    <div className="row mr-3 pl-4">
+                      {user.role === "USER" &&
+                        contents !== null &&
+                        contents.length > 0 &&
+                        contents.map((content) => (
+                          <Content
+                            key={content.id}
+                            currentContent={content}
+                            user={user}
+                          />
+                        ))}
                     </div>
                   )}
                 </div>
