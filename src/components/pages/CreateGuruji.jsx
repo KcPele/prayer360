@@ -57,12 +57,12 @@ const CreateGuruji = () => {
             <>
                 <Header />
                 <main>
-                    <div className="row align-items-center justify-content-center">
+                    <div className="flex">
                         <SideNav />
                         <ToastContainer />
-                        <div className="col-md-9">
+                        <div className="w-full">
                             <div className="create_guruji">
-                                <form onSubmit={onSubmit} className="mr-4 mt" style={{ marginTop: "11rem" }}>
+                                <form onSubmit={onSubmit} className="mr-4 my-4">
                                     <div className="form-group">
                                         <label><b>Guruji Name</b></label>
                                         <input name='name' onChange={onChange} type="text" className="form-control" style={{ height: "4rem" }} required value={guruji.name} />
