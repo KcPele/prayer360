@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import Header from "../layout/Header";
 import SideNav from "../layout/SideNav";
 import AuthContext from "../../context/auth/authContext";
 import UserContext from "../../context/user/userContext";
 import Gurujis from "./Gurujis";
-import Content from "../common/Content";
+
 import TourCard from "../tour/TourCard";
 
 const AllChurch = () => {
