@@ -34,6 +34,7 @@ import Store from "./components/pages/Store";
 import Church from "./components/pages/Church";
 import SubscribedChurch from "./components/pages/SubscribedChurch";
 import AllChurch from "./components/pages/AllChurch";
+import Navbar from "./components/Navbar";
 function App() {
   const authContext = useContext(AuthContext);
 
@@ -57,7 +58,7 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/virtual-home" exact component={VirtualHome} />
               <Route path="/tour" exact component={Tour} />
-              <Route path="/store" exact component={Store} />
+              <PrivateRoute path="/store" exact component={Store} />
               <Route path="/church/:slug" exact component={Church} />
               <Route path="/login" exact component={Login} />
 

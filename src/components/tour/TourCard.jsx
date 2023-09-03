@@ -15,7 +15,7 @@ const TourCard = ({ img, title, discription, url }) => {
         <div className="grid gap-2 px-6 py-6 text-white">
           <div className="font-bold text-xl mb-2">{title}</div>
           <div className="w-[50%]">
-            <hr />
+            <hr className="bg-white" />
           </div>
           <p className="max-w-[60%] mb-6 text-gray-300 text-base truncate">
             {discription}

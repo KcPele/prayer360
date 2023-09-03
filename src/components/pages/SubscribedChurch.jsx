@@ -53,12 +53,10 @@ const SubscribedChurch = () => {
           <>
             <Header />
             <main>
-              <div className="row h-screen justify-content-center">
+              <div className="flex min-h-screen ">
                 <SideNav />
-                <div className="col-md-9 pt-32">
-                  <div className="pr-3">
-                    <StoreCardSection storeData={storeData} />
-                  </div>
+                <div className="w-full p-4">
+                  <StoreCardSection storeData={storeData} />
                 </div>
               </div>
             </main>

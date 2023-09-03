@@ -6,6 +6,7 @@ import AuthContext from "../../context/auth/authContext";
 import UserContext from "../../context/user/userContext";
 import Gurujis from "./Gurujis";
 import Content from "../common/Content";
+import TourCard from "../tour/TourCard";
 
 const AllChurch = () => {
   const authContext = useContext(AuthContext);
@@ -30,16 +31,40 @@ const AllChurch = () => {
           <>
             <Header />
             <main>
-              <div className="row h-screen justify-content-center">
+              <div className=" min-h-screen flex">
                 <SideNav />
-                <div className="col-md-9 pt-32">
-                  <div className="pr-3 grid grid-cols-3 gap-8">
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
-                    <div className="max-w-[21rem] w-full h-[14rem] bg-white rounded-md"></div>
+                <div className=" pt-6  w-full">
+                  <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-3">
+                    <TourCard
+                      title="Trimbakeshwar Temple"
+                      discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
+                      img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                      url="/church/trimbakeshwar"
+                    />
+                    <TourCard
+                      title="Trimbakeshwar Temple"
+                      discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
+                      img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                      url="/church/trimbakeshwar"
+                    />
+                    <TourCard
+                      title="Trimbakeshwar Temple"
+                      discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
+                      img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                      url="/church/trimbakeshwar"
+                    />
+                    <TourCard
+                      title="Trimbakeshwar Temple"
+                      discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
+                      img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                      url="/church/trimbakeshwar"
+                    />
+                    <TourCard
+                      title="Trimbakeshwar Temple"
+                      discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
+                      img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                      url="/church/trimbakeshwar"
+                    />
                   </div>
                 </div>
               </div>

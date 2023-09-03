@@ -25,14 +25,13 @@ const SubscriberContents = () => {
   if (user !== null) {
     return (
       <div style={{ position: "relative" }}>
-        <Navbar />
         {user.guruji_subscribed_to === null ? (
           <Gurujis />
         ) : (
           <>
             <Header />
             <main>
-              <div className="row h-screen justify-content-center">
+              <div className="row min-h-screen justify-content-center">
                 <SideNav />
                 <div className="col-md-9 pt-32">
                   <div className="">

@@ -13,7 +13,7 @@ const SideNav = () => {
   if (user !== null) {
     const role = user.role;
     return (
-      <div className="col-3 side_bar_container">
+      <div className="max-w-sm w-full side_bar_container">
         <div className="side_bar">
           <div
             style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
