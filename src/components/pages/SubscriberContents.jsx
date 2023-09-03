@@ -6,6 +6,7 @@ import AuthContext from "../../context/auth/authContext";
 import UserContext from "../../context/user/userContext";
 import Gurujis from "./Gurujis";
 import Content from "../common/Content";
+import Navbar from "../Navbar";
 
 const SubscriberContents = () => {
   const authContext = useContext(AuthContext);
@@ -24,6 +25,7 @@ const SubscriberContents = () => {
   if (user !== null) {
     return (
       <div style={{ position: "relative" }}>
+        <Navbar />
         {user.guruji_subscribed_to === null ? (
           <Gurujis />
         ) : (

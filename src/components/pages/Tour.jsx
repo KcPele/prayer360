@@ -63,9 +63,9 @@ const Tour = () => {
           ))}
         </div>
         <div className=" px-10 py-16 md:py-28 grid gap-10 md:gap-20 md:grid-cols-[fit-content(100%)_1fr_fit-content(100%)]">
-          <div className=" text-black font-bold text-2xl md:text-4xl">
-            <p>Location:</p>
-            <p>Hollyland</p>
+          <div className=" text-black font-bol">
+            <p className="text-2xl">Location:</p>
+            <p className="text-2xl">Hollyland</p>
           </div>
           <div className="tour__card-section2 grid gap-12">
             <TourCard

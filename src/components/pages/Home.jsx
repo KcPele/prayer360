@@ -18,7 +18,7 @@ export default function Home() {
     {
       src: "/assets/images/pil3.png",
       title: "Souvenir",
-      url: "/virtual-home",
+      url: "/store",
     },
   ];
   return (

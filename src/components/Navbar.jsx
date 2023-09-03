@@ -1,9 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import AuthContext from "../context/auth/authContext";
 
 function Navbar() {
+  const authContext = useContext(AuthContext);
+  const { user } = authContext;
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="bg-black  relative">
@@ -11,7 +14,7 @@ function Navbar() {
         <div className="flex items-center justify-between py-2">
           <div className="flex items-center  justify-between w-full ">
             <div className="flex-shrink-0">
-              <h3 className="text-white text-xl font-bold">PLAYER 360</h3>
+              <h3 className="text-white text-xl font-bold">PRAYER 360</h3>
             </div>
             <div className="hidden nav:block">
               <div className="ml-10 flex items-baseline space-x-4 ">
@@ -26,7 +29,7 @@ function Navbar() {
                   to="/dashboard"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
-                  Subscription Plans
+                  Subscription
                 </Link>
 
                 <Link
@@ -43,12 +46,21 @@ function Navbar() {
                   Player Token
                 </Link>
 
-                <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
-                >
-                  Contact Us
-                </Link>
+                {user == null ? (
+                  <Link
+                    to="/login"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
+                  >
+                    Login
+                  </Link>
+                ) : (
+                  <Link
+                    to="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
+                  >
+                    Contact Us
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -123,7 +135,7 @@ function Navbar() {
                 to="/dashboard"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
-                Subscription Plans
+                Subscription
               </Link>
 
               <Link
@@ -140,12 +152,21 @@ function Navbar() {
                 Player Token
               </Link>
 
-              <Link
-                to="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
-              >
-                Contact Us
-              </Link>
+              {user !== null ? (
+                <Link
+                  to="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
+                >
+                  Contact Us
+                </Link>
+              ) : (
+                <Link
+                  to="/login"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
+                >
+                  Logins
+                </Link>
+              )}
             </div>
           </div>
         )}

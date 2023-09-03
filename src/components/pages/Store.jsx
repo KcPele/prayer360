@@ -31,7 +31,7 @@ const Store = () => {
       <Navbar />
       <div className="bg-home bg-cover bg-center bg-no-repeat  min-h-screen">
         <div className="flex justify-center items-center py-24 px-6">
-          <div className="max-w-[59.1rem] w-full">
+          <div className="max-w-[67.1rem] w-full">
             <StoreCardSection storeData={storeData} />
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import ColorModal from "./ColorModal";
-
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
 const StoreCardModal = ({ isOpen, closeModal, title, image }) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -81,12 +81,18 @@ const StoreCardModal = ({ isOpen, closeModal, title, image }) => {
                       </div>
                     </div>
                     <div className="flex justify-end ">
-                      <p
-                        onClick={closeModal}
-                        className="text-3xl cursor-pointer font-bold text-black "
-                      >
-                        Back
-                      </p>
+                      <div>
+                        <p
+                          onClick={closeModal}
+                          className="text-3xl   cursor-pointer font-bold text-black "
+                        >
+                          Back
+                        </p>
+                        {/* <MdOutlineKeyboardBackspace
+                          className="w-10"
+                          size={24}
+                        /> */}
+                      </div>
                     </div>
                   </div>
                 </div>
