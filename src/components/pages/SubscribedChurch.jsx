@@ -58,7 +58,7 @@ const SubscribedChurch = () => {
               <div className="flex min-h-screen ">
                 <SideNav />
                 <div className="w-full p-4">
-                  <div className="mb-3">
+                  <div className="mb-3 grid sm:grid-flow-col justify-between">
                     <div className="rounded-full border-2 border-gray-950 p-1 w-fit">
                       <button
                         className={`${
@@ -80,6 +80,11 @@ const SubscribedChurch = () => {
                       >
                         Church Store
                       </button>
+                    </div>
+                    <div className="mr-32">
+                      <p className="font-semibold text-lg">
+                        Chuch Name: Vatican Church Holy
+                      </p>
                     </div>
                   </div>
                   {showChurchStore ? (
