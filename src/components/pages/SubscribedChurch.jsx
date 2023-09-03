@@ -59,17 +59,33 @@ const SubscribedChurch = () => {
                 <SideNav />
                 <div className="w-full p-4">
                   <div className="mb-3">
-                    <button
-                      className="rounded-full text-white bg-slate-950 p-3"
-                      onClick={() => setShowChurchStore(!showChurchStore)}
-                    >
-                      {showChurchStore ? "Church Store" : "Subscribed Church"}
-                    </button>
+                    <div className="rounded-full border-2 border-gray-950 p-1 w-fit">
+                      <button
+                        className={`${
+                          showChurchStore
+                            ? "text-black"
+                            : "text-white bg-slate-950"
+                        } p-3 rounded-full`}
+                        onClick={() => setShowChurchStore(false)}
+                      >
+                        Subscribed Church
+                      </button>
+                      <button
+                        className={`${
+                          showChurchStore
+                            ? "text-white bg-slate-950"
+                            : "text-black"
+                        } p-3 rounded-full`}
+                        onClick={() => setShowChurchStore(true)}
+                      >
+                        Church Store
+                      </button>
+                    </div>
                   </div>
                   {showChurchStore ? (
                     <StoreCardSection storeData={storeData} />
                   ) : (
-                    <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-3">
+                    <div className=" grid tour__card-section2 gap-3 md:gap-6 px-3">
                       <TourCard
                         title="Trimbakeshwar Temple"
                         discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
 import Navbar from "../Navbar";
-
+import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
   const authContext = useContext(AuthContext);
   const { user } = authContext;
@@ -12,27 +12,13 @@ const Header = () => {
       <>
         <Navbar />
         <header>
-          <nav className="header">
-            <button className="btn btn_mobile_nav open_btn">
-              <img
-                src="img/previous.png"
-                alt=""
-                className="icon_mobile_nav open_icon"
-              />
-              <img
-                src="img/close.png"
-                alt=""
-                className="icon_mobile_nav close_icon"
-              />
-            </button>
-
-            <h5 className="heading_mobile">GURUJIS</h5>
-            <a href="#!" className="pl-5 display_none">
+          <nav className="">
+            <a href="#!" className="pl-5 ">
               <img src="img/Prayer.png" alt="" />
             </a>
 
-            <div className="d-flex align-items-center pr-4 hide">
-              <div className="earning display_none">
+            <div className="sm:flex items-center">
+              <div className="earning ">
                 {user.role === "USER" ? (
                   <h6>
                     <b>
@@ -46,7 +32,7 @@ const Header = () => {
                   </h6>
                 )}
               </div>
-              <div className="d-flex align-items-center hide">
+              <div className="d-flex align-items-center ">
                 <p className="pl-3 pr-2">
                   Hello{" "}
                   <b>
@@ -88,10 +74,6 @@ const Header = () => {
                 </div>
               </div>
             </div>
-
-            <button className="btn menu_btn">
-              <img src="img/menu.png" alt="" className="icon_mobile_nav" />
-            </button>
           </nav>
         </header>
       </>

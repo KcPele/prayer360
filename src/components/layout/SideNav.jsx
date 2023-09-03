@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
-
+import { BiLogOut, BiSolidChurch } from "react-icons/bi";
+import { MdNotificationsActive, MdSubscriptions } from "react-icons/md";
 const SideNav = () => {
   const authContext = useContext(AuthContext);
   const { logout, user } = authContext;
@@ -13,8 +14,8 @@ const SideNav = () => {
   if (user !== null) {
     const role = user.role;
     return (
-      <div className="max-w-sm w-full side_bar_container">
-        <div className="side_bar">
+      <div className="md:max-w-[300px] lg:w-full mt-2">
+        <div className="side_bar hidden lg:flex flex-col justify-between">
           <div
             style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
           >
@@ -128,22 +129,27 @@ const SideNav = () => {
               </Link>
             </div>
           </div>
-          <div
-            style={{
-              backgroundColor: " #211552",
-              padding: "2rem",
-              margin: "2rem",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "2rem",
-            }}
-            className="rounded background"
-          >
-            <img src="img/logout.png" alt="" className="display_none" />
+          <div className="bg-gray-900 p-4 flex flex-col gap-3 items-center">
+            <img src="img/logout.png" alt="" className="" />
             <a href="#!" onClick={onLogout}>
               <img src="img/btnContact.png" alt="" />
             </a>
+          </div>
+        </div>
+        <div className="flex flex-col justify-between bg-white min-h-screen shadow-sm lg:hidden">
+          <div className="grid  gap-8">
+            <Link to="/all-churches" className=" p-4">
+              <BiSolidChurch size={24} />
+            </Link>
+            <Link to="/subscribed-churches" className="p-4">
+              <MdSubscriptions size={24} />
+            </Link>
+            <Link to="/subscribed-churches" className="p-4">
+              <MdNotificationsActive size={24} />
+            </Link>
+          </div>
+          <div className="p-4 " onClick={onLogout}>
+            <BiLogOut size={24} />
           </div>
         </div>
       </div>

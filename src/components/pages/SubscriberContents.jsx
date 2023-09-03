@@ -31,9 +31,9 @@ const SubscriberContents = () => {
           <>
             <Header />
             <main>
-              <div className="row min-h-screen justify-content-center">
+              <div className="flex min-h-screen ">
                 <SideNav />
-                <div className="col-md-9 pt-32">
+                <div className="w-full p-4">
                   <div className="">
                     <div className="">
                       <div className="row align-items-center mb-4">
