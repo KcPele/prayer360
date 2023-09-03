@@ -6,7 +6,7 @@ import AuthContext from "../context/auth/authContext";
 
 function Navbar() {
   const authContext = useContext(AuthContext);
-  const { user } = authContext;
+  const { user, logout } = authContext;
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="bg-black  relative">
@@ -49,9 +49,10 @@ function Navbar() {
                 ) : (
                   <Link
                     to="#"
+                    onClick={() => logout()}
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
                   >
-                    Contact Us
+                    Logout
                   </Link>
                 )}
               </div>
@@ -141,9 +142,10 @@ function Navbar() {
               {user !== null ? (
                 <Link
                   to="#"
+                  onClick={() => logout()}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
                 >
-                  Contact Us
+                  logout
                 </Link>
               ) : (
                 <Link
