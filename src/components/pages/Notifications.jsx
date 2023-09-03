@@ -22,10 +22,10 @@ const Notifications = () => {
       <>
         <Header />
         <main>
-          <div className="flex">
+          <div className=" flex">
             <SideNav />
             <div className="w-full p-4">
-              <div className="subscribers pr-4">
+              <div className="subscribers ">
                 <div className="earning none">
                   {user.role === "USER" ? (
                     <h6>
