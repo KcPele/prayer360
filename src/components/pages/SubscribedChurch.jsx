@@ -58,27 +58,54 @@ const SubscribedChurch = () => {
                 <SideNav />
                 <div className="w-full p-4">
                   <div className="mb-3 grid sm:grid-flow-col justify-between">
-                    <div className="rounded-full border-2 border-gray-950 p-1 w-fit">
-                      <button
-                        className={`${
-                          showChurchStore
-                            ? "text-black"
-                            : "text-white bg-slate-950"
-                        } px-3 py-2 rounded-full`}
-                        onClick={() => setShowChurchStore(false)}
+                    <div className="flex gap-2  w-fit">
+                      <div
+                        className="flex items-center p-1"
+                        style={{
+                          background: "#2a1e59",
+                          borderRadius: "50px",
+                        }}
                       >
-                        Subscribed Church
-                      </button>
-                      <button
-                        className={`${
-                          showChurchStore
-                            ? "text-white bg-slate-950"
-                            : "text-black"
-                        } px-3 py-2 rounded-full`}
-                        onClick={() => setShowChurchStore(true)}
-                      >
-                        Church Store
-                      </button>
+                        <div className="px-8 text-white">Library</div>
+                        <div
+                          className=" py-2 text-center"
+                          style={{
+                            background: "#fff",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          {user.guruji !== null &&
+                          user.guruji.calendly_link !== null ? (
+                            <a
+                              href={`${user.guruji.calendly_link}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="px-3 text-dark text-decoration-none"
+                            >
+                              Schedule Meeting
+                            </a>
+                          ) : (
+                            <a
+                              href="#!"
+                              className="d-inline-block text-dark text-decoration-none"
+                            >
+                              Not Available for Meetings
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                      <div className="rounded-full border-2 border-gray-950 p-1 w-fit">
+                        <button
+                          className={`${
+                            showChurchStore
+                              ? "text-white bg-slate-950"
+                              : "text-black"
+                          } px-3 py-2 rounded-full`}
+                          onClick={() => setShowChurchStore(true)}
+                        >
+                          Church Store
+                        </button>
+                      </div>
                     </div>
                     <div className="mr-32">
                       <p className="font-semibold text-lg">
