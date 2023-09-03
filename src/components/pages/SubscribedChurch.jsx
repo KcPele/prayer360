@@ -65,7 +65,7 @@ const SubscribedChurch = () => {
                           showChurchStore
                             ? "text-black"
                             : "text-white bg-slate-950"
-                        } p-3 rounded-full`}
+                        } px-3 py-2 rounded-full`}
                         onClick={() => setShowChurchStore(false)}
                       >
                         Subscribed Church
@@ -75,7 +75,7 @@ const SubscribedChurch = () => {
                           showChurchStore
                             ? "text-white bg-slate-950"
                             : "text-black"
-                        } p-3 rounded-full`}
+                        } px-3 py-2 rounded-full`}
                         onClick={() => setShowChurchStore(true)}
                       >
                         Church Store

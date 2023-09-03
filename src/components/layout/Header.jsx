@@ -13,10 +13,9 @@ const Header = () => {
         <Navbar />
         <header>
           <nav className="">
-            <a href="#!" className="pl-5 ">
-              <img src="img/Prayer.png" alt="" />
-            </a>
-
+            <div className="ml-4">
+              <h2 className="font-bold text-2xl">BLESS LOGO</h2>
+            </div>
             <div className="sm:flex items-center">
               <div className="earning ">
                 {user.role === "USER" ? (
