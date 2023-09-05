@@ -24,8 +24,12 @@
 }
 
 .all__churches-card-section {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  grid-template-columns: repeat(auto-fill , minmax(min(100%, 290px), 1fr));
+  
+
 }
+
+
 #create_user {
   display: none;
 }

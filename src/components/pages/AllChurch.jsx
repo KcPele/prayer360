@@ -33,8 +33,8 @@ const AllChurch = () => {
             <main>
               <div className=" min-h-screen flex">
                 <SideNav />
-                <div className=" pt-6  w-full">
-                  <div className=" grid all__churches-card-section gap-3 md:gap-6 px-3">
+                <div className=" pt-6  w-fit mx-auto">
+                  <div className=" grid all__churches-card-section gap-6 md:gap-6 px-3">
                     <TourCard
                       title="Trimbakeshwar Temple"
                       discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."

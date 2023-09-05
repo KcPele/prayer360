@@ -78,14 +78,14 @@ const SubscriberContents = () => {
                               </div>
                             </div>
                             <div
-                              className="col-md-3 mb-3"
+                              className="col-md-3 mt-[-1%] flex"
                               style={{ color: "#2a1e59", textAlign: "center" }}
                             >
                               <span>
                                 <img
                                   src="img/live.png"
                                   alt=""
-                                  className="mr-1"
+                                  className="mt-1 mr-1"
                                 />
                               </span>
                               <strong>Live</strong>
@@ -102,8 +102,7 @@ const SubscriberContents = () => {
                             {user.guruji !== null ? (
                               <Link to={`/guruji/${user.guruji.reference}`}>
                                 <strong>{user.guruji.name}</strong>
-                              </Link>
-                            ) : (
+                              </Link>                            ) : (
                               "None"
                             )}
                           </h6>
