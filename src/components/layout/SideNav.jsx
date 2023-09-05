@@ -2,7 +2,13 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
 import { BiLogOut, BiSolidChurch } from "react-icons/bi";
-import { MdNotificationsActive, MdSubscriptions } from "react-icons/md";
+import {
+  MdNotificationsActive,
+  MdSubscriptions,
+  MdRoomPreferences,
+  MdSupportAgent,
+} from "react-icons/md";
+import { FcDataConfiguration } from "react-icons/fc";
 const SideNav = () => {
   const authContext = useContext(AuthContext);
   const { logout, user } = authContext;
@@ -137,17 +143,53 @@ const SideNav = () => {
           </div>
         </div>
         <div className="flex flex-col justify-between bg-white min-h-screen shadow-sm lg:hidden">
-          <div className="grid  gap-8">
-            <Link to="/all-churches" className=" p-4">
-              <BiSolidChurch size={24} />
-            </Link>
-            <Link to="/subscribed-churches" className="p-4">
-              <MdSubscriptions size={24} />
-            </Link>
-            <Link to="/subscribed-churches" className="p-4">
-              <MdNotificationsActive size={24} />
-            </Link>
-          </div>
+          {role === "ADMIN" && (
+            <div className="grid  gap-8">
+              <Link to="/subscribers" className="p-4">
+                <MdSubscriptions size={24} />
+              </Link>
+              <Link to="/gurujis" className="p-4">
+                <FcDataConfiguration size={24} className="p-4" />
+              </Link>
+              <Link to="/agents" className="p-4">
+                <MdSupportAgent size={24} />
+              </Link>
+              <Link to="/notifications" className="p-4">
+                <MdNotificationsActive size={24} />
+              </Link>
+            </div>
+          )}
+          {role === "GURUJI" && (
+            <div className="grid  gap-8">
+              <Link to="/notifications" className="p-4">
+                <MdNotificationsActive size={24} />
+              </Link>
+            </div>
+          )}
+          {role === "USER" && (
+            <div className="grid  gap-8">
+              <Link to="/all-churches" className=" p-4">
+                <BiSolidChurch size={24} />
+              </Link>
+              <Link to="/subscribed-churches" className="p-4">
+                <MdSubscriptions size={24} />
+              </Link>
+              <Link to="/subscribed-churches" className="p-4">
+                <MdNotificationsActive size={24} />
+              </Link>
+            </div>
+          )}
+          {role === "AGENT" && (
+            <div className="grid  gap-8">
+              <Link to="/referrals" className="p-4">
+                <MdRoomPreferences size={24} />
+              </Link>
+              <Link to="/notifications" className="p-4">
+                <MdNotificationsActive size={24} />
+              </Link>
+            </div>
+          )}
+
           <div className="p-4 " onClick={onLogout}>
             <BiLogOut size={24} />
           </div>

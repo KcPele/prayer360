@@ -26,9 +26,9 @@ const SubscriberDetails = () => {
       <>
         <Header />
         <main>
-            <div className="row align-items-center justify-content-center">
+            <div className="flex">
                 <SideNav />
-                <div className="col-9">
+                <div className="w-full">
                     <div className="subscribers pr-4">
                       <div className="earning none">
                         <h6>Total Earning <b>${user.earning}</b></h6>
